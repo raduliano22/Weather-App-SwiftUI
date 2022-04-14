@@ -37,7 +37,7 @@ struct ContentView: View {
                 }
                 
                 HStack {
-                    
+                //weather for next days
                 }
                           
             }
