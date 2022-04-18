@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC328CCF280D5ADA00D63EA9 /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC328CCE280D5ADA00D63EA9 /* WeatherButton.swift */; };
 		EC43B5362808AAB200C5926F /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43B5352808AAB200C5926F /* WeatherAppApp.swift */; };
 		EC43B5382808AAB200C5926F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC43B5372808AAB200C5926F /* ContentView.swift */; };
 		EC43B53A2808AAB500C5926F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC43B5392808AAB500C5926F /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC328CCE280D5ADA00D63EA9 /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
 		EC43B5322808AAB200C5926F /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC43B5352808AAB200C5926F /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
 		EC43B5372808AAB200C5926F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				EC43B5372808AAB200C5926F /* ContentView.swift */,
 				EC43B5392808AAB500C5926F /* Assets.xcassets */,
 				EC43B53B2808AAB500C5926F /* Preview Content */,
+				EC328CCE280D5ADA00D63EA9 /* WeatherButton.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				EC43B5382808AAB200C5926F /* ContentView.swift in Sources */,
 				EC43B5362808AAB200C5926F /* WeatherAppApp.swift in Sources */,
+				EC328CCF280D5ADA00D63EA9 /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isNight =  false
+    
     var body: some View {
         ZStack {
             
-            BackgroundView(topColor: .blue, bottomColor: Color("lightBlue"))
+            BackgroundView(isNight: $isNight)
             
             VStack {
                 
                 CityTextView(cityName: "Coupertino, CA")
                 
-                MainWeatherStatusView(imageName:"cloud.sun.fill", temperature: 76)
-             
-                HStack(spacing:30) {
+                MainWeatherStatusView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: 76)
+                
                 //weather for next days
+                HStack(spacing:30) {
+            
                     WeatherDayView(dayOfWeek: "TUE", imageName: "cloud.sun.fill", temperature: 74)
                     WeatherDayView(dayOfWeek: "WED", imageName: "sun.max.fill", temperature: 88)
                     WeatherDayView(dayOfWeek: "THU", imageName: "wind.snow", temperature: 55)
@@ -31,13 +35,9 @@ struct ContentView: View {
                 Spacer()
                 
                 Button {
-                    print("Tapped")
+                    isNight.toggle()
                 } label: {
-                    Text("Change Day Time")
-                        .frame(width: 280, height: 50)
-                        .background(.white)
-                        .font(.system(size: 20, weight: .bold, design: .default))
-                        .cornerRadius(10)
+                    WeatherButton(title: "Change Day Time", textColor: .blue, backgroudColor: .white)
                     
                     
                 }
@@ -78,12 +78,11 @@ struct WeatherDayView: View {
 
 struct BackgroundView: View {
     
-    var topColor: Color
-    var bottomColor: Color
+    @Binding var isNight: Bool
     
     var body: some View {
 
-        LinearGradient(gradient: Gradient(colors: [topColor, bottomColor]),  startPoint: .topLeading,endPoint: .bottomTrailing)
+        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),  startPoint: .topLeading,endPoint: .bottomTrailing)
             .edgesIgnoringSafeArea(.all)
     }
 }
@@ -123,3 +122,5 @@ struct MainWeatherStatusView: View {
         }.padding(.bottom, 40)
     }
 }
+
+
